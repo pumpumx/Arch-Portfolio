@@ -1,54 +1,42 @@
-# React + TypeScript + Vite
+# 🐧 Archfolio — Arch Linux Themed Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sleek, fast, and minimal developer portfolio inspired by the aesthetics of Arch Linux. Built with **React**, **TypeScript**, and **GSAP** for smooth animations and a terminal-inspired UX.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🖼️ Preview
 
-## Expanding the ESLint configuration
+> A modern portfolio site with a tiling window manager feel, terminal-style interface, and high performance animations.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+![preview-image](src/assets/arch.png) <!-- Replace with your actual screenshot -->
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🧱 Tech Stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **React + TypeScript** – Component-based architecture with strict typing  
+- **GSAP (GreenSock)** – Animation framework for smooth and performant transitions  
+- **Tailwind CSS** *(optional but recommended)* – Utility-first styling for rapid UI development  
+- **Monospace Fonts** – For a clean, terminal-like appearance (`Fira Code`, `JetBrains Mono`)  
+- **Arch Aesthetic** – Dark theme, minimal layout, blue accent (`#1793D1`)  
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+---
+
+## 🚀 Features
+
+- Terminal-style animated intro  
+- Modular “window-like” project layout  
+- Blazing fast transitions with GSAP  
+- Responsive design for all screen sizes  
+- Themed toggles (dark/light or color schemes)  
+- Command-line navigation simulation *(optional bonus)*  
+
+---
+
+## 🛠️ Getting Started
+
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/yourusername/archfolio.git
+cd archfolio
