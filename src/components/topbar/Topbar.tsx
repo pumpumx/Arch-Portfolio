@@ -21,7 +21,7 @@ function Topbar() {
     return (
         <>
             <div className={clsx(
-                "w-full h-full  flex items-center justify-between cursor-default"
+                "w-full h-full z-20 flex items-center justify-between cursor-default"
             )}>
                 <div className={clsx(
                     "w-[30%] h-full barlow-light text-white flex items-center ml-3 "
