@@ -38,7 +38,7 @@ function Topbar() {
                     "w-[30%] h-full flex items-center justify-end gap-3 mr-8"
                 )}>
                     {trayIcons.map((val , index)=>(
-                        <div className='w-[16px] bg-contain h-full bg-no-repeat bg-center' id={index.toString()} style={{backgroundImage:`url(${val.iconLink})`}}>
+                        <div key={index} className='w-[16px] bg-contain h-full bg-no-repeat bg-center' id={index.toString()} style={{backgroundImage:`url(${val.iconLink})`}}>
                         </div>
                     ))}
                 </div>

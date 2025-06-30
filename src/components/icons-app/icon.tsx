@@ -1,9 +1,13 @@
 interface iconsReuse{
     iconImage: string,
     name: string,
-    id: string,
+    id: number,
     refLink:string | undefined
 }
+
+
+
+
 function IconReuse({iconImage,name,id,refLink }:iconsReuse): React.ReactNode {
     const LinkHandler = (refLink:(string | undefined))=>{
 
@@ -20,7 +24,7 @@ function IconReuse({iconImage,name,id,refLink }:iconsReuse): React.ReactNode {
     }
     return (
         <>
-            <div id={id} className="flex items-center flex-col w-[100px] mt-5 p-1  hover:bg-white/60 ease-out  transition-all" onDoubleClick={()=>LinkHandler(refLink)}>
+            <div key={id} className="flex items-center flex-col w-[100px] mt-5 p-1  hover:bg-white/60 ease-out  transition-all" onDoubleClick={()=>LinkHandler(refLink)}>
                 <div className='w-[40px] h-[40px] bg-contain ' style={{ backgroundImage: `url(${iconImage})` }}>
                 </div>
                 <div className='font-light text-white cursor-default'>{name}</div>
