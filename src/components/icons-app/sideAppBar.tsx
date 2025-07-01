@@ -13,7 +13,6 @@ function SideAppBar() {
         ))}
       </div>
     </div>
-
   )
 }
 

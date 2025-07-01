@@ -1,6 +1,11 @@
+import { useOpenApp } from "../store/openAppStore"
 
 
 
+type iconType = {
+    iconLink:string,
+    iconName:string
+}
 const headerIcons = [
     {
         iconLink:"src/apps/headerIcons/minimize.ico",
@@ -26,6 +31,13 @@ interface appHeader{
 function AppHeader({appIcon,appName}:appHeader):React.ReactElement{
 
     //App header logic
+    const toggleCloseApp = useOpenApp((state)=>state.toggleApp)
+
+    const toggleAppHandler = (val:iconType)=>{
+        if(val.iconName === 'close' ){
+            toggleCloseApp(appName , 'opened',false)
+        }
+    }
 
   return (
     <div className="w-full h-[3vh] bg-neutral-900 flex items-center justify-between p-2 rounded-t-lg">
@@ -37,7 +49,9 @@ function AppHeader({appIcon,appName}:appHeader):React.ReactElement{
          </div>
          <div className="w-[20%] h-full flex items-center justify-end gap-2">
             {headerIcons.map((val , index:number)=>(
-                <span className="w-[10px] h-[10px] bg-contain bg-center hover:scale-120 ease-in transition-all" id={index.toString()} style={{backgroundImage:`url(${val.iconLink})`}}></span>
+                <span key={index} onClick={()=>toggleAppHandler(val)} className="w-[10px] h-[10px] bg-contain bg-center hover:scale-120 ease-in transition-all" id={index.toString()} style={{backgroundImage:`url(${val.iconLink})`}}>
+
+                </span>
             ))}
          </div>
     </div>

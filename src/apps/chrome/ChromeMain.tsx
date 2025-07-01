@@ -1,18 +1,26 @@
-import { useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import AppHeader from "../AppHeader"
 import Draggable from "react-draggable"
-import { mainScreenAppList } from "../../components/mainScreen/MainScreen.tsx"
 
 function Chrome():React.ReactElement{
   const chromeUrl:string = "https://www.google.com/webhp?igu=1"
   const dragRef = useRef<HTMLDivElement>(null) 
 
-  const chromeProperties = mainScreenAppList.find((val)=>val.appName==='Chrome')
-  console.log("chrome",chromeProperties)
+  const [isLoading,setIsLoading] = useState<boolean>(true)
+
+  useEffect(()=>{
+    setTimeout(()=>{
+      if(isLoading === true){
+        setIsLoading(false)
+      }
+      
+    },1000)
+  },[])
+
   return ( 
     <>
-      <Draggable nodeRef={dragRef as React.RefObject<HTMLElement>} offsetParent={document.body} >
-       <div className="w-[50vw] h-[70vh] absolute " ref={dragRef}>
+    {isLoading ? <div></div>:<Draggable nodeRef={dragRef as React.RefObject<HTMLElement>} offsetParent={document.body} >
+       <div className="w-[50vw] h-[70vh] absolute " ref={dragRef} >
       <div>
         <AppHeader appIcon="/icons/chrome.svg" appName="Chrome" />
       </div>
@@ -20,7 +28,8 @@ function Chrome():React.ReactElement{
             <iframe src={chromeUrl} className="w-full h-full"></iframe>
         </div>
     </div>
-    </Draggable>
+    </Draggable>}
+      
     </> 
   )
 }
