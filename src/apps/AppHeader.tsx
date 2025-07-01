@@ -45,7 +45,7 @@ function AppHeader({appIcon,appName}:appHeader):React.ReactElement{
             <span className="w-[20px] h-[20px] bg-cover bg-center" style={{backgroundImage:`url(${appIcon})`}}></span>
          </div>
          <div className="flex items-center justify-center w-[10%] h-full font-bold text-sm text-white">
-            <span>{appName}</span>
+            <span className="text-nowrap">{appName}</span>
          </div>
          <div className="w-[20%] h-full flex items-center justify-end gap-2">
             {headerIcons.map((val , index:number)=>(

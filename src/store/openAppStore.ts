@@ -33,7 +33,8 @@
             set((state)=>({
                 AppName: state.AppName.map((app)=>app.appName===name ? {...app , [key]:value} :app )
             }))
-        }   
+        },
+        
     }))
 
 

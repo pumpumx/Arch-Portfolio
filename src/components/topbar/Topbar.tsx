@@ -18,6 +18,7 @@ function Topbar() {
     useEffect(() => {
     }, [])
 
+
     return (
         <>
             <div className={clsx(
@@ -44,7 +45,6 @@ function Topbar() {
                 </div>
             </div>
         </>
-
     )
 }
 

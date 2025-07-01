@@ -6,6 +6,7 @@ import LoadingScreen from './components/loadingScreen/LoadingScreen.tsx'
 import { lazyMainScreen } from './lazyIndex.ts'
 import { withSuspense } from './custom-hooks/WithSuspense.tsx'
 import Chrome from './apps/chrome/ChromeMain.tsx'
+import AboutMeMain from './apps/about-me/AboutMeMain.tsx'
 
 
 const MainScreenWithSuspense = withSuspense(lazyMainScreen, <LoadingScreen />);
@@ -17,8 +18,8 @@ const routes = createBrowserRouter(
     </Route>  
     <Route path='/app' element={<Chrome/>}>
     </Route>
+    <Route path='/about' element={<AboutMeMain/>} />
     </>
-
   )
 )
 

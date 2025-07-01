@@ -39,7 +39,6 @@ function SideBarMain() {
       </div>
       {openMainBar && createPortal(<SearchScreen/>,document.body)}
     </div>
-    
   )
 }
 
