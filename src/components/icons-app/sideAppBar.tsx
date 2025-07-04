@@ -7,7 +7,6 @@ import IconReuse from "./icon"
 
 function SideAppBar() {
   const toggleApp = useOpenApp((state)=>state.toggleApp);
-
   return (
     <div className="flex justify-end">
       <div className="flex flex-col h-full ">

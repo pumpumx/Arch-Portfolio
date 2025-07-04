@@ -8,7 +8,7 @@ type aboutMe = {
 
 
 const usePageNavigator = create<aboutMe>((set)=>({
-    pageName:'about-me',
+    pageName:'About Me',
     changePageName:(newPageName:string)=>{
         set({pageName:newPageName});
     }
