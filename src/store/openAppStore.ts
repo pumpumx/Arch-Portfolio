@@ -14,6 +14,11 @@
                 minimized: false,
             },
             {
+                appName: 'About-me',
+                opened: false,
+                minimized: false,
+            },
+            {
                 appName: 'Setting',
                 opened: false,
                 minimized: false,

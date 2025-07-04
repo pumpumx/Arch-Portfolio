@@ -5,9 +5,11 @@ import SideBarMain from '../sideBar/SideBarMain'
 import React from 'react'
 import Chrome from '../../apps/chrome/ChromeMain'
 import { useChangeWallpaper, useOpenApp } from '../../store/openAppStore'
+import AboutMeMain from '../../apps/about-me/AboutMeMain'
 
 const appComponentMap:Record<string , React.FC> = {
-    Chrome:Chrome
+    Chrome:Chrome,
+    'About-me':AboutMeMain
 }
 
 

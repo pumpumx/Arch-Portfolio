@@ -1,15 +1,18 @@
 export const appIcons = [    
     {
         iconLink:"/icons/chrome.svg",
-        name:"Chrome"
+        name:"Chrome",
+        state:'opened'
     },
     {
         iconLink:"/icons/folder.svg",
-        name:"About-me"
+        name:"About-me",
+        state:'opened'
     },
     {
         iconLink:"/icons/recycle.svg",
-        name:"Recyle"
+        name:"Recyle",
+        state:'opened'
     },
     {
         iconLink:"/icons/github.svg",
