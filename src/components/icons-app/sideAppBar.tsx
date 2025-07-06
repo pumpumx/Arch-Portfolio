@@ -15,7 +15,6 @@ function SideAppBar() {
             <IconReuse id={index} iconImage={val.iconLink} name={val.name} refLink={val.refLink} >
           </IconReuse>
           </div>  
-          
         ))}
       </div>
     </div>

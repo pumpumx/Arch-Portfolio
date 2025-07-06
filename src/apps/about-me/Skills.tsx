@@ -11,10 +11,7 @@ import {
 import {
   SiMongodb,
   SiExpress,
-  SiJavascript,
   SiTypescript,
-  SiHtml5,
-  SiCss3,
   SiTailwindcss,
   SiSocketdotio,
   SiRedux,
@@ -77,7 +74,7 @@ export default function SkillsPage() {
     {
       category: "Testing & Quality",
       items: [
-        { name: "Jest", icon: <SiJest className="text-pink-500" />, desc: "Unit testing for JS apps" },
+        { name: "Jest", icon: <SiJest className="text-pink-500" />, desc: "Unit testing for JS/TS apps" },
         { name: "RTL", icon: <SiTestinglibrary className="text-red-300" />, desc: "Testing React components" },
         { name: "Postman", icon: <SiPostman className="text-orange-400" />, desc: "API testing & mocking" },
       ],

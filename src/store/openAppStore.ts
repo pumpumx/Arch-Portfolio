@@ -24,7 +24,7 @@
                 minimized: false,
             },
             {
-                appName: 'Vscode',
+                appName: 'Konsole',
                 opened: false,
                 minimized: false,
             },

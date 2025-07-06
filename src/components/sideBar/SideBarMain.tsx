@@ -9,6 +9,11 @@ const sideBarApps = [
     name: "Chrome",
     link: "icons/chrome.svg",
     state1:'opened'
+  },
+  {
+    name: "Konsole",
+    link: "icons/konsole.svg",
+    state1:'opened'
   }
 ]
 
