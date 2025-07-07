@@ -19,7 +19,7 @@ function MainScreen() {
 
     const appState = useOpenApp((state)=>state.AppName)
     const bgImageLink = useChangeWallpaper((state)=>state.bgImageLink)
-
+    const isWinOnTop = useOpenApp((state)=>state.bringAppWindowOnTop)
     return (
         <>
             <div className="w-full min-h-screen bg-center overflow-x-hidden bg-cover" onContextMenu={(e)=>disableContextMenu(e)} style={{backgroundImage:`url(${bgImageLink})`}}>
@@ -32,7 +32,7 @@ function MainScreen() {
                     </div>
                     <div className='min-w-[70%] w-[85%] '>
                             {appState.map((val,index)=>(
-                                <div id={index.toString()} key={index}>
+                                <div id={index.toString()} key={index} onClick={()=>isWinOnTop(val.appName)} className={`absolute ${val.onTop ? "z-50 shadow-white":"z-10 "}`}>
                                     {val.opened && appComponentMap[val.appName] && React.createElement(appComponentMap[val.appName])}
                                 </div>
                             ))}

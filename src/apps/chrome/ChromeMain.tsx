@@ -1,18 +1,17 @@
-import { Suspense, useRef, useState } from "react"
+import {  useRef, useState } from "react"
 import AppHeader from "../AppHeader"
 import Draggable from "react-draggable"
-
 function Chrome(): React.ReactElement {
+
   const chromeUrl: string = "https://www.google.com/webhp?igu=1"
   const dragRef = useRef<HTMLDivElement>(null)
-
   const [isLoaded, setIsLoaded] = useState<boolean>(true)
-
+  
 
   return (
-    <>
+    <>  
         <Draggable nodeRef={dragRef as React.RefObject<HTMLElement>} offsetParent={document.body} >
-          <div className="w-[50vw] h-[70vh] absolute" ref={dragRef}>
+          <div className={ `w-[50vw] h-[70vh] absolute `} ref={dragRef} >
             <AppHeader appIcon="/icons/chrome.svg" appName="Chrome" />
             <div className="w-full h-full relative bg-neutral-800">
 
