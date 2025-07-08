@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import astro from '../assets/astro.jpg'
+import astro from '/assets/astro.jpg'
 
 type openApp = {
     AppName: { appName: string, opened: boolean, minimized: boolean, onTop: boolean }[],

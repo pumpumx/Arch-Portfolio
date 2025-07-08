@@ -8,15 +8,15 @@ type iconType = {
 }
 const headerIcons = [
     {
-        iconLink:"src/apps/headerIcons/minimize.ico",
+        iconLink:"/headerIcons/minimize.ico",
         iconName:"minimize"
     },
     {
-        iconLink:"src/apps/headerIcons/maximize.ico",
+        iconLink:"/headerIcons/maximize.ico",
         iconName:"maximize"
     },
     {
-        iconLink:"src/apps/headerIcons/close.ico",
+        iconLink:"/headerIcons/close.ico",
         iconName:"close"
     },
 

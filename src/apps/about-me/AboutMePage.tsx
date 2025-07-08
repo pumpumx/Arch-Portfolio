@@ -5,7 +5,7 @@ function AboutMePage() {
       <div className="w-full max-w-[100%] max-h-[100%] rounded-2xl shadow-2xl p-8 flex flex-col items-center text-center space-y-6 bg-gradient-to-br from-[#1f2937] to-[#111827] border border-gray-700">
         <div
           className="w-[50px] h-[50px] md:w-[100px] md:h-[100px] text-wrap rounded-[150%] bg-cover bg-center border-4 border-purple-500 shadow-lg transition-transform duration-300 hover:scale-105"
-          style={{ backgroundImage: `url('src/assets/Mypfp.jpeg')` }}
+          style={{ backgroundImage: `url('/assets/Mypfp.jpeg')` }}
         ></div>
 
         <div className="space-y-1">
