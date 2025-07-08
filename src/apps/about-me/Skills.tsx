@@ -6,7 +6,6 @@ import {
   FaLinux,
   FaGitAlt,
   FaDocker,
-  FaGithub,
 } from "react-icons/fa";
 import {
   SiMongodb,

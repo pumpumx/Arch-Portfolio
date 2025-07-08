@@ -2,18 +2,18 @@ import { useRef, useState } from "react"
 import AppHeader from "../AppHeader"
 import Draggable from "react-draggable"
 
-type cmdMessage = {
-  cmd: { cmd: string, message: string }[];
-}
+// type cmdMessage = { Message controller 
+//   cmd: { cmd: string, message: string }[];
+// }
 
-const commandMessagesc: cmdMessage = {
-  cmd: [
-    {
-      cmd: "ls",
-      message: ""
-    }
-  ]
-}
+// const commandMessagesc: cmdMessage = {
+//   cmd: [
+//     {
+//       cmd: "ls",
+//       message: ""
+//     }
+//   ]
+// }
 
 function Konsole(): React.ReactElement {
   const dragRef = useRef<HTMLDivElement>(null)
