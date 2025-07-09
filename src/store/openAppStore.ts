@@ -1,5 +1,4 @@
 import { create } from "zustand";
-import astro from '/assets/astro.jpg'
 
 type openApp = {
     AppName: { appName: string, opened: boolean, minimized: boolean, onTop: boolean }[],
@@ -62,7 +61,7 @@ type changeWallpaper = {
 }
 
 export const useChangeWallpaper = create<changeWallpaper>((set) => ({
-    bgImageLink: astro,
+    bgImageLink: 'assets/jotaro.jpg',
     changeWallpaper: (newWallpaper: string) => {
         set({ bgImageLink: newWallpaper });
     }

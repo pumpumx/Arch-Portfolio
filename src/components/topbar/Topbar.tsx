@@ -27,7 +27,7 @@ function Topbar() {
                 <div className={clsx(
                     "w-[30%] h-full barlow-light text-white flex items-center ml-3 "
                 )}>
-                    <span><p>Activites</p></span>
+                    <span><p className='text-sm font-bold'>Activites</p></span>
                 </div>
                 <div className={clsx(
                     "w-[40%] h-full  text-white font-bold  flex items-center justify-center",

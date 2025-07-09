@@ -1,5 +1,5 @@
 import { useState } from "react"
-import SearchScreen from "./SearchScreen"
+import SearchScreen from "./SearchScreen.tsx"
 import { createPortal } from "react-dom"
 import { useOpenApp } from "../../store/openAppStore"
 
@@ -13,6 +13,11 @@ const sideBarApps = [
   {
     name: "Konsole",
     link: "icons/konsole.svg",
+    state1:'opened'
+  },
+  {
+    name: "Setting",
+    link: "icons/setting.svg",
     state1:'opened'
   }
 ]
