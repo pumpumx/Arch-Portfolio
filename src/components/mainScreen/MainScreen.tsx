@@ -7,11 +7,13 @@ import Chrome from '../../apps/chrome/ChromeMain'
 import { useChangeWallpaper, useOpenApp } from '../../store/openAppStore'
 import AboutMeMain from '../../apps/about-me/AboutMeMain'
 import Konsole from '../../apps/Terminal/TerminalMain'
+import SettingMain from '../../apps/Setting/SettingMain'
 
 const appComponentMap:Record<string , React.FC> = {
     Chrome:Chrome,
     'About-me':AboutMeMain,
-    'Konsole':Konsole
+    'Konsole':Konsole,
+    'Setting':SettingMain
 }
 
 
@@ -23,7 +25,7 @@ function MainScreen() {
     return (
         <>
             <div className="w-full min-h-screen bg-center overflow-x-hidden bg-cover" onContextMenu={(e)=>disableContextMenu(e)} style={{backgroundImage:`url(${bgImageLink})`}}>
-                <div className='w-full h-[5vh] bg-neutral-950 z-20'>   {/* Top bar */}
+                <div className='w-full h-[5vh] bg-[#1c202b]/90 z-20'>   {/* Top bar */}
                     <Topbar/>
                 </div>
                 <div className='w-full min-h-[95vh] flex bg-cover justify-between' id='portal'  >  

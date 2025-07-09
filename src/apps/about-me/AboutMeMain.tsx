@@ -19,7 +19,7 @@ function AboutMeMain() {
     const tabOpened = usePageNavigator((state)=>state.pageName) 
   return (
    <Draggable nodeRef={aboutRef as React.RefObject<HTMLElement>} offsetParent={document.body} >
-          <div className="w-[50vw] h-[70vh] absolute rounded-md" ref={aboutRef}>
+          <div className="w-[50vw] h-[70vh] absolute rounded-md shadow-[0px_0px_50px_1px_black]" ref={aboutRef}>
             <AppHeader appIcon="/icons/folder.svg" appName="About-me" />
             <div className="w-full h-full relative bg-neutral-800 flex ">
                 <div className={`navigation  h-full  z-50 md:min-w-[25%] absolute text-white/90 w-0`}>

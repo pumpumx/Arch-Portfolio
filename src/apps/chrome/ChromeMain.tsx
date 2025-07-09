@@ -11,7 +11,7 @@ function Chrome(): React.ReactElement {
   return (
     <>  
         <Draggable nodeRef={dragRef as React.RefObject<HTMLElement>} offsetParent={document.body} >
-          <div className={ `w-[50vw] h-[70vh] absolute `} ref={dragRef} >
+          <div className={ `w-[50vw] h-[70vh] absolute shadow-[0px_0px_50px_1px_black] `} ref={dragRef} >
             <AppHeader appIcon="/icons/chrome.svg" appName="Chrome" />
             <div className="w-full h-full relative bg-neutral-800">
 

@@ -31,7 +31,7 @@ function Konsole(): React.ReactElement {
   return (
     <>
       <Draggable nodeRef={dragRef as React.RefObject<HTMLElement>} offsetParent={document.body} >
-        <div className={`w-[50vw] h-[70vh] absolute`} ref={dragRef} >
+        <div className={`w-[50vw] h-[70vh] absolute shadow-[0px_0px_50px_1px_black]`} ref={dragRef} >
           <AppHeader appIcon="/icons/konsole.svg" appName="Konsole" />
           <div className="w-full h-full relative bg-neutral-800">
             <div className="w-full h-full bg-[#222526] overflow-y-hidden">
