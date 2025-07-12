@@ -26,7 +26,6 @@ function ChangeWallpaper() {
 
     return (
         <div className="w-full h-full p-4 space-y-6">
-
             <div className="w-full h-[30vh] flex items-center justify-center">
                 <div
                     className="w-[90%] sm:w-[70%] md:w-[50%] h-full rounded-xl shadow-md hover:opacity-80 cursor-pointer bg-center bg-cover bg-no-repeat transition-all duration-300"

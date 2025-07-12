@@ -24,7 +24,7 @@ function MainScreen() {
     const isWinOnTop = useOpenApp((state)=>state.bringAppWindowOnTop)
     return (
         <>
-            <div className="w-full min-h-screen bg-center overflow-x-hidden bg-cover" onContextMenu={(e)=>disableContextMenu(e)} style={{backgroundImage:`url(${bgImageLink})`}}>
+            <div className="w-full min-h-screen bg-center overflow-x-hidden bg-cover  " onContextMenu={(e)=>disableContextMenu(e)} style={{backgroundImage:`url(${bgImageLink})`}}>
                 <div className='w-full h-[5vh] bg-[#1c202b]/90 z-20'>   {/* Top bar */}
                     <Topbar/>
                 </div>
