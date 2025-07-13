@@ -15,9 +15,6 @@ const navBarNames = [ //Make it a global State
   {
     name:'Education'
   }
-  ,{
-    name:'Resume'
-  }
 ]
 
 
