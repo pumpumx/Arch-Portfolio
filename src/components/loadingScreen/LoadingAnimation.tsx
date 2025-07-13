@@ -7,7 +7,6 @@ function loaderAnimation(ref:React.RefObject<null>){
 
   const tl = gsap.timeline({onComplete(){
     //Navigating to the main window logic 
-    console.log("Animation completed")
     
   }})
 

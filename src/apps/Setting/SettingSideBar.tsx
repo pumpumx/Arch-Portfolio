@@ -16,8 +16,6 @@ const settingOptions = [
 
 function SettingSideBar() {
 
-    
-
     return (
         <div className='w-full z-20 h-full flex flex-col relative items-center justify-start pt-5 bg-black/50 shadow-lg ring-1 ring-black/5 '>
             <div className="w-[90%]  h-[4vh]">
