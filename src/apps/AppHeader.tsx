@@ -31,7 +31,6 @@ function AppHeader({ appIcon, appName }: appHeader): React.ReactElement {
     const toggleMaximize = useOpenApp((state) => state.isMinimized)
 
     const toggleAppHandler = (val: iconType) => {
-        console.log("logging in")
         if (val.iconName === 'close') {
             toggleCloseApp(appName, 'opened', false)
         }
