@@ -1,33 +1,24 @@
 import React from "react"
-import { useEffect, useRef, useState } from "react"
+import { useRef } from "react"
 import AppHeader from "../AppHeader"
 import Draggable from "react-draggable"
-import { neofetch } from "./terminalLogic"
 import { useTerminalStore } from "./TerminalStore"
-
-
 
 
 function Konsole(): React.ReactElement { //Need to create an output box!! 
   const dragRef = useRef<HTMLDivElement>(null)
 
-  const [_, setNeofetchAscii] = useState<string | null>(null);
   const commandHistory = useTerminalStore((state)=>state.cmdControls)
-  
-  useEffect(() => {
-    const art = neofetch()
-    console.log(art)
-    setNeofetchAscii(art)
-  }, [])
+
   return (
     <>
       <Draggable nodeRef={dragRef as React.RefObject<HTMLElement>} offsetParent={document.body} >
         <div className={`w-[50vw] h-[90vh] absolute  shadow-[0px_0px_50px_1px_black]`} ref={dragRef} >
           <AppHeader appIcon="/icons/konsole.svg" appName="Konsole" />
-          <div className="w-full h-full relative overflow-y-scroll bg-neutral-800">
+          <div className="w-full h-full relative overflow-y-scroll bg-[#222526]">
            {commandHistory.map((value,index)=>(
              <div key={index} className="w-full  bg-[#222526] overflow-y-hidden">
-               <div className="text-green-500 text-xs overflow-x-hidden"><pre>${value.outputBox}</pre></div>
+               <div className="text-green-500 text-xs overflow-x-hidden"><pre>{value.outputBox}</pre></div>
               {React.createElement(value.inputElement)}
             </div>
            ))}

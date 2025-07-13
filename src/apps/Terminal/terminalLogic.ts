@@ -1,22 +1,5 @@
 
-type helpCommand = {
-    helpCmd:{cmd:string}[];
-}
 
-
-export const help:helpCommand = {
-    helpCmd:[
-    {
-        cmd:"neofetch"
-    },
-    {
-        cmd:"ls"
-    },
-    {
-        cmd:"socials"
-    }
-]
-}
                                                                                   
 
 export let asciiArt = `
@@ -43,7 +26,9 @@ export let asciiArt = `
 
 console.log(asciiArt);
 
-export function neofetch(cmd?:string):string{
-
+export function neofetch():string{
     return asciiArt
 }
+
+
+export const availableCommands:string = "Available Commands -> neofetch clear cd echo ls help secret "

@@ -16,10 +16,16 @@ const sideBarApps = [
     state1:'opened'
   },
   {
+    name: "About-me",
+    link: "icons/folder.svg",
+    state1:'opened'
+  },
+  {
     name: "Setting",
     link: "icons/setting.svg",
     state1:'opened'
-  }
+  },
+  
 ]
 
 function SideBarMain() {

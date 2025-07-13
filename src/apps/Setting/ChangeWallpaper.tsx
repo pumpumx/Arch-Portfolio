@@ -13,11 +13,6 @@ const availableWallpapers = [
         name: "Kite",
         link: "assets/kite.jpg"
     },
-    {
-        name: "win7",
-        link: "assets/win7.jpg"
-    },
-    
 ]
 
 function ChangeWallpaper() {

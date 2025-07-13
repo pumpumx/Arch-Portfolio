@@ -5,11 +5,14 @@ import Navigation from './Navigation.tsx'
 import AboutMePage from './AboutMePage.tsx'
 import SkillsPage from './Skills.tsx'
 import usePageNavigator from '../../store/aboutMeStore.ts'
-
+import ProjectShowcase from './Project.tsx'
+import EducationSection from './Education.tsx'
 
 const aboutMeComponentMap:Record<string , React.FC> = { 
   'Skillset':SkillsPage,
   'About Me':AboutMePage,
+  'Projects':ProjectShowcase,
+  'Education':EducationSection,
 }
 
 
@@ -25,7 +28,7 @@ function AboutMeMain() {
                 <div className={`navigation  h-full  z-50 md:min-w-[25%] absolute text-white/90 w-0`}>
                   <Navigation/>
                 </div>
-                <div className={`md:min-w-[75%] nax-w-[100%] w-full h-full rounded-md bg-gradient-to-br from-gray-900 via-gray-800 to-black `}>
+                <div className={`md:min-w-[75%] max-w-[100%] w-full h-full rounded-md bg-gradient-to-br from-gray-900 via-gray-800 to-black `}>
                   {aboutMeComponentMap[tabOpened] && React.createElement(aboutMeComponentMap[tabOpened])}
                 </div>
             </div>
