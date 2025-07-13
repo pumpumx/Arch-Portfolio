@@ -34,11 +34,10 @@ function AppHeader({ appIcon, appName }: appHeader): React.ReactElement {
         console.log("logging in")
         if (val.iconName === 'close') {
             toggleCloseApp(appName, 'opened', false)
-            console.log("state toogled for maximizing", appName)
         }
         if (val.iconName === 'maximize') {
             toggleMaximize(appName)
-            console.log("state toogled for maximizing", appName)
+
         }
     }
 
