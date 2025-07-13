@@ -1,6 +1,6 @@
 import SideAppBar from '../icons-app/sideAppBar'
 import Topbar from '../topbar/Topbar'
-import { disableContextMenu } from '../../custom-hooks/useDisableContextMenu'
+import ContextMenu from '../../custom-hooks/DisableContextMenu'
 import SideBarMain from '../sideBar/SideBarMain'
 import React from 'react'
 import Chrome from '../../apps/chrome/ChromeMain'
@@ -16,7 +16,6 @@ const appComponentMap:Record<string , React.FC> = {
     'Setting':SettingMain
 }
 
-
 function MainScreen() {
 
     const appState = useOpenApp((state)=>state.AppName)
@@ -24,17 +23,18 @@ function MainScreen() {
     const isWinOnTop = useOpenApp((state)=>state.bringAppWindowOnTop)
     return (
         <>
-            <div className="w-full min-h-screen bg-center overflow-x-hidden bg-cover  " onContextMenu={(e)=>disableContextMenu(e)} style={{backgroundImage:`url(${bgImageLink})`}}>
+            <div className="w-full min-h-screen max-h-[100vh] bg-center overflow-x-hidden bg-cover  "  style={{backgroundImage:`url(${bgImageLink})`}}>
                 <div className='w-full h-[5vh] bg-[#1c202b]/90 z-20'>   {/* Top bar */}
                     <Topbar/>
                 </div>
-                <div className='w-full min-h-[95vh] flex bg-cover justify-between' id='portal'  >  
+                <div className='w-full min-h-[95vh] flex z-0 bg-cover justify-between relative overflow-x-hidden overflow-y-hidden ' id='portal'  >  
                     <div className='min-w-0 w-[5%]'>
                             <SideBarMain/>   {/* Side Bar */}
                     </div>
-                    <div className='min-w-[70%] w-[85%] '>
+                    <div className='min-w-[70%] w-[100%] h-[95vh] '>
+                        <ContextMenu/>
                             {appState.map((val,index)=>(
-                                <div id={index.toString()} key={index} onClick={()=>isWinOnTop(val.appName)} className={`absolute ${val.onTop ? "z-50 shadow-white":"z-10 "}`}>
+                                <div id={index.toString()} key={index}  onClick={()=>isWinOnTop(val.appName)} className={`absolute ${val.onTop ? "z-50 shadow-white":"z-10 "}`}>
                                     {val.opened && appComponentMap[val.appName] && React.createElement(appComponentMap[val.appName])}
                                 </div>
                             ))}

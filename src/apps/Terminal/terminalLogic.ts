@@ -3,12 +3,12 @@
                                                                                   
 
 export let asciiArt = `
-                   -                    pumpum@devProd 
+                   -                    jojo@devProd 
                   .o+                    -------------- 
                  \`ooo/                   OS: Arch Linux x86_64 
-                \`+oooo:                  Host: 82K2 IdeaPad Gaming 3 15ACH6 
-               \`+oooooo:                 Kernel: 6.14.2-arch1-1 
-               -+oooooo+:                Uptime: 11 days, 14 hours, 40 mins 
+                \`+oooo:                  Host: 82K2 IdeaPad  
+               \`+oooooo:                 Kernel: 5.11.16-arch1-1 
+               -+oooooo+:                Uptime: 50 days, 14 hours, 40 mins 
              \`/:-:++oooo+:               Packages: 1474 (pacman) 
             \`/++++/+++++++:              Shell: zsh 5.9 
            \`/++++++++++++++:             Resolution: 1920x1080 
@@ -31,4 +31,4 @@ export function neofetch():string{
 }
 
 
-export const availableCommands:string = "Available Commands -> neofetch clear cd echo ls help secret "
+export const availableCommands:string = "Available Commands -> neofetch help"

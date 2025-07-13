@@ -2,9 +2,6 @@ import { useOpenApp } from "../../store/openAppStore"
 import { appIcons } from "../mainScreen/mainScreenConstants"
 import IconReuse from "./icon"
 
-
-
-
 function SideAppBar() {
   const toggleApp = useOpenApp((state)=>state.toggleApp);
   return (
