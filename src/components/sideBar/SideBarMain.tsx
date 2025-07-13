@@ -1,6 +1,4 @@
 import { useState } from "react"
-import SearchScreen from "./SearchScreen.tsx"
-import { createPortal } from "react-dom"
 import { useOpenApp } from "../../store/openAppStore"
 
 
@@ -49,11 +47,11 @@ function SideBarMain() {
         </div>
 
       ))} 
-      <div className="absolute bottom-5 w-[55px] h-[55px] rounded-lg hover:bg-white/10 flex items-center justify-center" onClick={()=>openMainBarHandler()}>
+      {/* <div className="absolute bottom-5 w-[55px] h-[55px] rounded-lg hover:bg-white/10 flex items-center justify-center" onClick={()=>openMainBarHandler()}> Might work on it later but not now
         <div className=" bg-cover w-[40px] h-[40px]" style={{ backgroundImage: `url('icons/grid.png')` }} >
         </div>
       </div>
-      {openMainBar && createPortal(<SearchScreen/>,document.body)}
+      {openMainBar && createPortal(<SearchScreen/>,document.body)} */}
     </div>
   )
 }

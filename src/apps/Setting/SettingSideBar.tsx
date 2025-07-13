@@ -9,16 +9,6 @@ const settingOptions = [
         link: "icons/chrome.svg",
         state1: 'opened'
     },
-    {
-        name: "Konsole",
-        link: "icons/konsole.svg",
-        state1: 'opened'
-    },
-    {
-        name: "Setting",
-        link: "icons/setting.svg",
-        state1: 'opened'
-    }
 ]
 
 
