@@ -77,7 +77,7 @@ type changeWallpaper = {
 }
 
 export const useChangeWallpaper = create<changeWallpaper>((set) => ({
-    bgImageLink: 'assets/jotaro.jpg',
+    bgImageLink: 'assets/kite.jpg',
     changeWallpaper: (newWallpaper: string) => {
         set({ bgImageLink: newWallpaper });
     }
