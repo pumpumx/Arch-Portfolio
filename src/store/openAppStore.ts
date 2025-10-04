@@ -17,7 +17,7 @@ export const useOpenApp = create<openApp>((set, get) => ({
         },
         {
             appName: 'About-me',
-            opened: false,
+            opened: true,
             minimized: true,
             onTop: false,
 
